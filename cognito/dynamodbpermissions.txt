@@ -1,0 +1,33 @@
+SuperDynamoDBScanPolicy
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "dynamodb:Query",
+                "dynamodb:Scan",
+                "s3:GetObject",
+                "s3:PutObject",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:*"
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Effect": "Allow"
+        }
+    ]
+}
+SuperDynamoDBQueryPolicy
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "dynamodb:Query"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}
